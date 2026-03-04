@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Executive Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        /* Admin specific overrides */
+        body { cursor: auto; background: var(--bg-dark); }
+        .cursor, .cursor-follower { display: none !important; }
+        .admin-page { padding-top: 120px; padding-bottom: 60px; min-height: 100vh; position: relative; z-index: 10; }
+        .admin-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; }
+        .admin-header h1 { font-size: 2.5rem; line-height: 1; margin: 0; }
+        .admin-header p { color: var(--gold); letter-spacing: 0.1em; font-family: var(--font-heading); }
+        
+        .table-panel { border-radius: 4px; overflow: hidden; background: rgba(5,5,5,0.9); }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-light); }
+        th { text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2rem; color: var(--gold); font-weight: 500; }
+        td { color: var(--text-primary); }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: rgba(212, 175, 55, 0.03); }
+        
+        .empty-state { padding: 6rem; text-align: center; color: var(--text-muted); }
+        .empty-state i { font-size: 4rem; color: var(--border-light); margin-bottom: 1rem; }
+        
+        .status-pill {
+            display: inline-block; padding: 0.3rem 0.8rem; border-radius: 20px;
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+            background: rgba(212, 175, 55, 0.1); color: var(--gold);
+            border: 1px solid var(--border-gold);
+        }
+        
+        .btn-icon {
+            background: transparent; border: 1px solid var(--border-light);
+            color: var(--text-muted); width: 40px; height: 40px; border-radius: 50%;
+            display: inline-flex; align-items: center; justify-content: center;
+            cursor: pointer; transition: all 0.3s;
+        }
+        .btn-icon:hover {
+            color: #ef4444; border-color: #ef4444; background: rgba(239, 68, 68, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <div class="logo">AURA<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="hover-underline">Return Home</a></li>
+                <li><a href="#" class="hover-underline" onclick="logout();" style="color: #ef4444;">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="admin-page container">
+        <div class="admin-header">
+            <div>
+                <p>Dashboard Overview</p>
+                <h1>Client Sessions</h1>
+            </div>
+            <a href="#" class="btn-primary" onclick="location.reload();">
+                <span><i class="ph ph-arrows-clockwise" style="margin-right: 0.5rem"></i> Sync Records</span>
+            </a>
+        </div>
+
+        <div id="adminError" class="form-alert hidden" style="margin-bottom: 2rem;"></div>
+
+        <div class="table-panel glass-panel">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gentleman</th>
+                        <th>Contact</th>
+                        <th>Request Date</th>
+                        <th>Manage</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingsTableBody">
+                    <tr>
+                        <td colspan="4" class="empty-state">
+                            <i class="ph ph-spinner-gap" style="animation: spin 1s linear infinite;"></i>
+                            <p>Authenticating & Loading Sessions...</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="footer" style="margin-top: auto;">
+        <div class="container" style="padding: 2rem 0; text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+            &copy; 2026 Aura Barbershop. Executive Access Only.
+        </div>
+    </footer>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

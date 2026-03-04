@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Barbershop | Ultimate Premium Grooming</title>
+    <meta name="description" content="A sanctuary of style and sophistication. Elevate your presence with Aura Barbershop's bespoke grooming experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Background Glow Effects -->
+    <div class="glow-blob blob-1"></div>
+    <div class="glow-blob blob-2"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-text">AURA<span>.</span></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AURA<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="hover-underline">Home</a></li>
+                <li><a href="#about" class="hover-underline">The Art</a></li>
+                <li><a href="#experience" class="hover-underline">Services</a></li>
+                <li><a href="admin.html" class="nav-admin-link">Admin</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="#booking" class="btn-primary magnetic-btn hide-mobile">
+                    <span>Book Session</span>
+                </a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-bg-wrapper">
+            <div class="hero-bg" style="background-image: url('bg.png');"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="subtitle intro-anim">Est. 2026 &mdash; The Ultimate Standard</div>
+            <h1 class="intro-anim">
+                <span class="line"><span class="reveal-text">Refine Your</span></span><br>
+                <span class="line"><span class="reveal-text gold-text">Presence.</span></span>
+            </h1>
+            <p class="intro-anim">An exclusive grooming sanctuary for the modern gentleman who demands absolute perfection.</p>
+            
+            <div class="hero-actions intro-anim">
+                <a href="#booking" class="btn-primary magnetic-btn">
+                    <span>Reserve Your Chair</span>
+                </a>
+                <a href="#experience" class="play-btn">
+                    <div class="play-icon"><i class="ph ph-play-fill"></i></div>
+                    <span>Discover</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-down intro-anim">
+            <span class="scroll-text">Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- About Section (New Layout) -->
+    <section id="about" class="about">
+        <div class="container section-inner">
+            <div class="about-grid">
+                <div class="about-image-col">
+                    <div class="image-wrapper parallax-img">
+                        <img src="barber_cutting.png" alt="Barber cutting hair" class="glass-img">
+                        <div class="experience-badge glass-panel">
+                            <h3 class="gold-text">10+</h3>
+                            <p>Years of<br>Excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text-col">
+                    <div class="section-badge">The Art of Grooming</div>
+                    <h2 class="split-text">Mastery in Every Detail.</h2>
+                    <p class="fade-in">Haircutting is an art form, a meticulous process of sculpting tailored exclusively to your bone structure, lifestyle, and aesthetic. At Aura, we transcend the ordinary barbershop experience, providing an immersive ritual of relaxation and refinement.</p>
+                    <ul class="features-list fade-in">
+                        <li>
+                            <i class="ph ph-check-circle gold-text"></i>
+                            <span>Bespoke consultations before every service.</span>
+                        </li>
+                        <li>
+                            <i class="ph ph-check-circle gold-text"></i>
+                            <span>Master barbers handpicked for their craft.</span>
+                        </li>
+                        <li>
+                            <i class="ph ph-check-circle gold-text"></i>
+                            <span>Ultra-premium, exclusive grooming products.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Services -->
+    <section id="experience" class="services">
+        <div class="marquee-wrapper">
+            <div class="marquee">
+                <span>PRECISION</span> <span class="dot"></span>
+                <span>LUXURY</span> <span class="dot"></span>
+                <span>ELEVATION</span> <span class="dot"></span>
+                <span>MASTERY</span> <span class="dot"></span>
+                <span>PRECISION</span> <span class="dot"></span>
+                <span>LUXURY</span> <span class="dot"></span>
+                <span>ELEVATION</span> <span class="dot"></span>
+                <span>MASTERY</span> <span class="dot"></span>
+            </div>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="services-header">
+                <div class="section-badge">Our Services</div>
+                <h2 class="split-text">Curated Experiences</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card glass-panel stagger-card">
+                    <div class="service-icon"><i class="ph-light ph-scissors"></i></div>
+                    <div class="service-content">
+                        <h3>The Aura Signature Cut</h3>
+                        <p>A transformative haircut, finished with a hot towel neck shave, styling, and premium cologne.</p>
+                        <div class="price gold-text">$$$</div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card glass-panel stagger-card">
+                    <div class="service-icon"><i class="ph-light ph-drop"></i></div>
+                    <div class="service-content">
+                        <h3>Royal Hot Towel Shave</h3>
+                        <p>Traditional straight razor shave, multi-layered hot towels, pre-shave oil, and soothing balm.</p>
+                        <div class="price gold-text">$$$</div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card glass-panel stagger-card">
+                    <div class="service-icon"><i class="ph-light ph-sparkle"></i></div>
+                    <div class="service-content">
+                        <h3>The Executive Package</h3>
+                        <p>The Signature Cut combined with the Royal Shave and an invigorating facial cleansing massage.</p>
+                        <div class="price gold-text">$$$$</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Image Divider -->
+    <section class="image-divider">
+        <div class="divider-bg" style="background-image: url('barber_tools.png');"></div>
+        <div class="divider-overlay"></div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container section-inner">
+            <div class="booking-wrapper glass-panel">
+                <div class="booking-info">
+                    <div class="section-badge">Appointments</div>
+                    <h2 class="split-text">Secure Your Chair</h2>
+                    <p class="fade-in">Experience the pinnacle of men's grooming. Provide your details below and our concierge will confirm your session.</p>
+                    
+                    <div class="contact-details fade-in">
+                        <div class="detail-item">
+                            <i class="ph ph-map-pin"></i>
+                            <span>123 Elite Avenue, Luxury District</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="ph ph-clock"></i>
+                            <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form-wrapper">
+                    <form id="bookingForm" class="form-elegant">
+                        <div class="form-row fade-in">
+                            <div class="input-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required autocomplete="name" placeholder="John Doe">
+                                <div class="input-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row fade-in">
+                            <div class="input-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" required autocomplete="tel" placeholder="+1 (555) 000-0000">
+                                <div class="input-line"></div>
+                            </div>
+                        </div>
+
+                        <div id="alertMessage" class="form-alert hidden"></div>
+
+                        <button type="submit" id="submitBtn" class="btn-primary form-submit magnetic-btn fade-in">
+                            <span class="btn-text">Request Booking</span>
+                            <div class="spinner hidden"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">AURA<span>.</span></div>
+                    <p>The ultimate standard in gentlemens grooming.</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" class="social-link magnetic-btn"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#" class="social-link magnetic-btn"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#" class="social-link magnetic-btn"><i class="ph ph-facebook-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aura Barbershop. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

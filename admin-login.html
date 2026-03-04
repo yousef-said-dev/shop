@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Aura Barbershop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        /* Admin specific overrides */
+        body { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: var(--bg-dark); cursor: auto; }
+        .cursor, .cursor-follower { display: none !important; }
+        .login-panel { padding: 4rem; width: 100%; max-width: 500px; text-align: center; }
+        .login-panel h1 { margin-bottom: 2rem; font-size: 2rem; }
+        .form-row { margin-bottom: 2rem; text-align: left; }
+        .error-message { color: #f44336; margin-bottom: 1.5rem; display: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="login-panel glass-panel">
+        <div class="logo" style="margin-bottom: 1rem;">AURA<span>.</span></div>
+        <h1>Executive Access</h1>
+        
+        <div id="loginError" class="error-message"></div>
+
+        <form id="loginForm" class="form-elegant">
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="email">Admin Email</label>
+                    <input type="email" id="email" required placeholder="admin@aura.com">
+                    <div class="input-line"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                    <div class="input-line"></div>
+                </div>
+            </div>
+
+            <button type="submit" id="loginBtn" class="btn-primary form-submit" style="cursor: pointer;">
+                <span class="btn-text">Log In</span>
+                <div class="spinner hidden"></div>
+            </button>
+        </form>
+        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--text-muted);"><a href="index.html" style="color: var(--gold); text-decoration: none;">&larr; Return to Home</a></p>
+    </div>
+
+    <script type="module" src="admin-login.js"></script>
+</body>
+</html>
