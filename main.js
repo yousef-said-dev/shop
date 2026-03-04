@@ -51,6 +51,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- 1.5 Mobile Menu Toggle ---
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinksContainer = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-links a');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinksContainer.classList.toggle('nav-active');
+        });
+
+        // Close menu when a link is clicked
+        navLinksItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinksContainer.classList.remove('nav-active');
+            });
+        });
+    }
+
     // --- 2. Preloader & Initial Animations ---
     const tl = gsap.timeline();
 
